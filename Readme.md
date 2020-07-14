@@ -1,7 +1,7 @@
 # Личный проект «Седона» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Анастасия Воронина](https://up.htmlacademy.ru/adaptive/20/user/1297343).
-* Наставник: [Дмитрий Вашкевич](https://htmlacademy.ru/profile/id116959).
+* Наставник: [Дмитрий 🤠 Вашкевич](https://htmlacademy.ru/profile/id116959).
 
 ---
 
