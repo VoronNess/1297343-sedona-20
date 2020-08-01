@@ -4,6 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <title>Туристический город «Седона», штат Аризона</title>
+  <link href="css/style.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
 <body class="page__body">
@@ -38,7 +40,7 @@
       </div>
     </nav>
     <a class="page-header__logo">
-      <img src="https://via.placeholder.com/101x84" width="102" height="84" alt="город «Седона»">
+      <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="город «Седона»">
     </a>
   </header>
   <main class="page-main">
@@ -46,49 +48,54 @@
     <section class="welcome">
       <h2 class="visually-hidden">Приветствуем!</h2>
       <div class="welcome__wrapper">
-        <img src="https://via.placeholder.com/115x28" width="115" height="28" alt="Добро пожаловать">
-        <img src="https://via.placeholder.com/107x18" width="107" height="18" alt="в безумно красивую">
-        <img src="https://via.placeholder.com/282x49" width="282" height="49" alt="Седону">
-        <img src="https://via.placeholder.com/173x46" width="173" height="46" alt="«Потому что Гранд Каньон отстой!»">
+        <img src="img/text-sedona-index.svg" width="282" height="214"
+          alt="Добро пожаловать в безумно красивую Седону. «Потому что Гранд Каньон отстой!»">
       </div>
     </section>
     <section class="advantages">
       <header class="advantages__header">
         <h2 class="visually-hidden">Наши преимущества</h2>
-        <p class="advantages__slogan">
+        <p class="advantages__slogan main-slogan">
           Седона - небольшой<br>
           городок в Аризоне,<br>
           заслуживающий большего!
         </p>
-        <p class="advantages__intro">
+        <p class="advantages__intro main-intro">
           Рассмотрим 5 причин, по которым<br>
           Седона круче, чем Гранд Каньон!
         </p>
       </header>
-      <div class="advantages__wrapper ">
+      <div class="advantages__wrapper">
         <ul class="advantages__list">
-          <li class="advantages__item">
-            <h3 class="advantages__title">Настоящий городок</h3>
-            <span>№1</span>
-            <p class="advantages__description">
-              Седона не аттракцион для туристов,<br>
-              там течет своя жизнь
-            </p>
-            <img src="https://via.placeholder.com/320x260" width="320" height="260" alt="Вид на уютный местный дом">
+          <li class="advantages__item ">
+            <div class="blue-theme blue-theme__padding-1">
+              <h3 class="advantages__title">Настоящий городок</h3>
+              <span>№1</span>
+              <p class="advantages__description">
+                Седона не аттракцион для туристов,<br>
+                там течет своя жизнь
+              </p>
+            </div>
+            <img src="img/main-city-mobile@1x.jpg" width="320" height="260" alt="Вид на уютный местный дом">
             <div class="deep-advantages">
               <div class="deep-advantages__wrapper ">
                 <ul class="deep-advantages__list">
                   <li class="deep-advantages__item deep-advantages__item--house">
                     <h3 class="deep-advantages__title">Жилье</h3>
-                    <p class="deep-advantages__description">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
+                    <p class="deep-advantages__description">Рекомендуем пожить в<br>
+                      настоящем мотеле, все как в<br>
+                      кино!</p>
                   </li>
                   <li class="deep-advantages__item deep-advantages__item--souvenirs">
                     <h3 class="deep-advantages__title">Сувениры</h3>
-                    <p class="deep-advantages__description">Не только китайского, но и местного производства!</p>
+                    <p class="deep-advantages__description">Не только китайского, но и<br>
+                      местного производства!</p>
                   </li>
                   <li class="deep-advantages__item deep-advantages__item--food">
                     <h3 class="deep-advantages__title">Еда</h3>
-                    <p class="deep-advantages__description">Всегда заказывайте фирменный бургер, вы не разочаруетесь!
+                    <p class="deep-advantages__description">Всегда заказывайте<br>
+                      фирменный бургер, вы не<br>
+                      разочаруетесь!
                     </p>
                   </li>
                 </ul>
@@ -96,16 +103,17 @@
             </div>
           </li>
           <li class="advantages__item">
-            <h3 class="advantages__title">Там есть мост дьявола</h3>
-            <span>№2</span>
-            <p class="advantages__description">
-              Да, по нему можно пройти! Если вы<br>
-              осмелитесь, конечно
-            </p>
-            <img src="https://via.placeholder.com/320x260" width="320" height="260"
-              alt="Вид на уникальный местный ландшафт">
+            <div class="blue-theme blue-theme__padding-2">
+              <h3 class="advantages__title">Там есть мост дьявола</h3>
+              <span>№2</span>
+              <p class="advantages__description">
+                Да, по нему можно пройти! Если вы<br>
+                осмелитесь, конечно
+              </p>
+            </div>
+            <img src="img/main-bridge-mobile@1x.jpg" width="320" height="260" alt="Вид на уникальный местный ландшафт">
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item standart-theme standart-theme__padding">
             <h3 class="advantages__title">Небольшая площадь</h3>
             <span>№3</span>
             <p class="advantages__description">
@@ -113,7 +121,7 @@
               очень близко
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item standart-theme standart-theme__padding">
             <h3 class="advantages__title">Красивая дорога</h3>
             <span>№4</span>
             <p class="advantages__description">
@@ -121,7 +129,7 @@
               совсем не скучно!
             </p>
           </li>
-          <li class="advantages__item">
+          <li class="advantages__item standart-theme standart-theme__padding">
             <h3 class="advantages__title">Мало туристов</h3>
             <span>№5</span>
             <p class="advantages__description">
@@ -147,7 +155,7 @@
     <section class="map">
       <h2 class="visually-hidden">Карта расположения города Седона</h2>
       <div class="map__wrapper">
-        <img class="map__picture" src="https://via.placeholder.com/320x350" width="320" height="350"
+        <img class="map__picture" src="img/bg-map-mobile@1x.jpg" width="320" height="350"
           alt="Карта с расположением города Седона, штат Аризона">
       </div>
     </section>

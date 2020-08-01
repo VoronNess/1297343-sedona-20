@@ -1,0 +1,73 @@
+/*-------Основные цвета--------*/
+@base-white:#FFFFFF;
+@base-grey:#F2F2F2;
+@base-lightkgrey: #EEEEEE;
+@base-middlegrey:#D5D5D5;
+@base-blue:#81B3D2;
+@base-black:#000000;
+
+
+/*------Цвета состояний-------*/
+@light-grey: #E5E5E5;
+@middle-grey:#D6D6D6;
+@brown:#333333;
+@chocolate:#766357;
+@dark-chocolate:#604E43;
+@light-blue:#669EC0;
+@middle-blue:#5496BD;
+@dark-grey:#5C6870;
+
+/*--Цвета для замены картинок--*/
+
+/*------Тени----*/
+@mobile-menu-dark-shadow: 0px 1px 0px fade(@base-black, 20%);
+@mobile-menu-white-shadow:inset 0px 1px 0px fade(@base-white, 20%);
+@dark-gradient:linear-gradient(180deg, fade(@base-black, 0%) 0%, fade(@base-black, 20%) 100%);
+
+/*-----Состояния------------*/
+@main-menu-active:@chocolate;
+@main-menu-active-hover:@dark-chocolate;
+@main-menu-active-down:fade(@chocolate, 30%);
+
+@mobile-menu-burger:@base-blue;
+@mobile-menu-burger-hover:fade(@base-blue, 60%);
+@mobile-menu-burger-down:fade(@base-blue, 30%);
+
+@mobile-menu-close:@base-white;
+@mobile-menu-close-hover:fade(@base-white, 60%);
+@mobile-menu-close-down:fade(@base-white, 30%);
+
+@blue-button-hover:@light-blue;
+@blue-button-down:@middle-blue;
+@blue-button-disabled:@light-grey;
+
+@text-button-down:fade(@base-white, 60%);
+
+@input:@base-grey;
+@input-hover:@light-grey;
+@input-active:@base-white;
+@input-text:@base-black;
+
+@radio-button:@brown;
+@radio-button-down:fade(@brown, 30%);
+
+@back-radio-button:@base-grey;
+@back-radio-button-hover:@light-grey;
+@back-radio-button-down:@base-middlegrey;
+
+@checkbox-button:@brown;
+@checkbox-button-down:fade(@brown, 30%);
+
+@back-checkbox-button:@base-grey;
+@back-checkbox-button-hover:@light-grey;
+@back-checkbox-button-down:@base-middlegrey;
+
+@replay:@dark-grey;
+@replay-hover:@brown;
+@replay-down:fade(@brown, 30%);
+
+
+/*----------Шрифты-----*/
+@main-font:"PT Sans", sans-serif;
+@main-font-size: 14px;
+@main-line-height: 21px;
