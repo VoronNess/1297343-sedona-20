@@ -58,82 +58,85 @@
       <section>
         <h2 class="visually-hidden">Форма-отзыв</h2>
         <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
-          <fieldset class="presenting form__item">
-            <legend class="presenting__title">Представьтесь:</legend>
-            <ul class="site-list">
-              <li>
-                <label for="presenting-name">Имя<sup>*</sup>:</label>
-                <input class="form-input" id="presenting-name" type="text" name="user" placeholder="Петр">
-              </li>
-              <li>
-                <label for="presenting-surname">Фамилия<sup>*</sup>:</label>
-                <input class="form-input" id="presenting-surname" type="text" name="surname" placeholder="Иванов">
-              </li>
-              <li>
-                <label for="presenting-patronymic">Отчество:</label>
-                <input class="form-input" id="presenting-patronymic" type="text" name="patronymic"
-                  placeholder="Александрович">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="contacts form__item">
-            <legend class="contacts__title">Контактная информация:</legend>
-            <ul class="site-list">
-              <li>
-                <label for="contacts-tel">Контактный телефон<sup>*</sup>:</label>
-                <input class="form-input" id="contacts-tel" type="number" name="tel" placeholder="Введите телефон">
-              </li>
-              <li>
-                <label for="contacts-email">Электронная почта<sup>*</sup>:</label>
-                <input class="form-input" id="contacts-email" type="email" name="email" placeholder="Введите e-mail">
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="imprassion form__item">
-            <legend class="imprassion__title">Ваше общее впечатление:</legend>
-            <ul class="site-list">
-              <li>
-                <input type="radio" name="imprassion-group" value="positive" id="filter-positive" checked>
-                <label for="filter-positive">Скорее положительное</label>
-              </li>
-              <li>
-                <input type="radio" name="imprassion-group" value="negative" id="filter-negative">
-                <label for="filter-negative">Скорее положительное</label>
-              </li>
-              <li>
-                <input type="radio" name="imprassion-group" value="negative" id="filter-difficult">
-                <label for="filter-difficult">Скорее положительное</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="visited form__item">
-            <legend class="visited__title">Посещенные достопримечательности:</legend>
-            <ul class="site-list">
-              <li>
-                <input type="checkbox" name="bridge" id="filter-bridge" checked>
-                <label for="filter-bridge">Мост Дьявола</label>
-              </li>
-              <li>
-                <input type="checkbox" name="mountain" id="filter-mountain" checked>
-                <label for="filter-mountain">Гора-Колокол</label>
-              </li>
-              <li>
-                <input type="checkbox" name="park" id="filter-park" checked>
-                <label for="filter-park">Слайд-парк</label>
-              </li>
-              <li>
-                <input type="checkbox" name="rocks" id="filter-rocks">
-                <label for="filter-rocks">Красные скалы</label>
-              </li>
-            </ul>
-          </fieldset>
-          <fieldset class="emotions form__item">
-            <legend class="emotions_title">Опишите свои эмоции:</legend>
-            <label class="visually-hidden" for="emotions-message"></label>
-            <textarea class="emotions-message" id="emotions-message" name="message" rows="1" cols="1"
-              placeholder="Опишите подробно все свои восторги"></textarea>
-          </fieldset>
-          <button class="button filter-show" type="submit">Отправить отзыв</button>
+          <div class="feedback-form__wrapper">
+            <fieldset class="presenting form__item">
+              <legend class="presenting__title">Представьтесь:</legend>
+              <ul class="presenting-list">
+                <li>
+                  <label for="presenting-name">Имя<sup>*</sup>:</label>
+                  <input class="form-input" id="presenting-name" type="text" name="user" placeholder="Петр">
+                </li>
+                <li>
+                  <label for="presenting-surname">Фамилия<sup>*</sup>:</label>
+                  <input class="form-input" id="presenting-surname" type="text" name="surname" placeholder="Иванов">
+                </li>
+                <li>
+                  <label for="presenting-patronymic">Отчество:</label>
+                  <input class="form-input" id="presenting-patronymic" type="text" name="patronymic"
+                    placeholder="Александрович">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="contacts form__item">
+              <legend class="contacts__title">Контактная информация:</legend>
+              <ul class="contacts-list">
+                <li>
+                  <label for="contacts-tel">Контактный телефон<sup>*</sup>:</label>
+                  <input class="form-input" id="contacts-tel" type="number" name="tel" placeholder="Введите телефон">
+                </li>
+                <li>
+                  <label for="contacts-email">Электронная почта<sup>*</sup>:</label>
+                  <input class="form-input" id="contacts-email" type="email" name="email" placeholder="Введите e-mail">
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="imprassion form__item">
+              <legend class="imprassion__title">Ваше общее впечатление:</legend>
+              <ul class="imprassion-list">
+                <li>
+                  <input type="radio" name="imprassion-group" value="positive" id="filter-positive" checked>
+                  <label for="filter-positive">Скорее положительное</label>
+                </li>
+                <li>
+                  <input type="radio" name="imprassion-group" value="negative" id="filter-negative">
+                  <label for="filter-negative">Скорее отрицательное</label>
+                </li>
+                <li>
+                  <input type="radio" name="imprassion-group" value="negative" id="filter-difficult">
+                  <label for="filter-difficult">затрудняюсь ответить</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="visited form__item">
+              <legend class="visited__title">Посещенные достопримечательности:</legend>
+              <ul class="visited-list">
+                <li>
+                  <input type="checkbox" name="bridge" id="filter-bridge" checked>
+                  <label for="filter-bridge">Мост Дьявола</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="mountain" id="filter-mountain" checked>
+                  <label for="filter-mountain">Гора-Колокол</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="park" id="filter-park" checked>
+                  <label for="filter-park">Слайд-парк</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="rocks" id="filter-rocks">
+                  <label for="filter-rocks">Красные скалы</label>
+                </li>
+              </ul>
+            </fieldset>
+            <fieldset class="emotions form__item">
+              <legend class="emotions_title">Опишите свои эмоции:</legend>
+              <label class="visually-hidden" for="emotions-message"></label>
+              <textarea class="emotions-message" id="emotions-message" name="message" rows="1" cols="1"
+                placeholder="Опишите подробно все свои восторги"></textarea>
+            </fieldset>
+            <button class="button filter-show" type="submit">Отправить отзыв</button>
+            <p class="form__footnote"><sup>*</sup> — обязательные поля</p>
+          </div>
         </form>
       </section>
     </section>

@@ -4,6 +4,11 @@
 }
 
 .feedback__header {
+  max-width: 306px;
+  max-height: 151px;
+  margin: auto;
+  padding-bottom: 17px;
+
   @media (min-width: @tablet-width) {
     padding: 65px 0;
     max-width: 435px;
@@ -19,4 +24,72 @@
 .feedback__intro {
   font-size: 14px;
   line-height: 24px;
+}
+
+.feedback-form__wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 0 19px;
+
+  @media (min-width: @tablet-width) {
+    flex-direction: row;
+    padding: 0 60px;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 960px;
+  }
+}
+
+.imprassion {
+  @media (min-width: @tablet-width) {
+    order: -1;
+    width: 300px;
+  }
+}
+
+.contacts,
+.visited,
+.emotions {
+  @media (min-width: @tablet-width) {
+    width: 100%;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
+
+.presenting {
+  @media (min-width: @tablet-width) {
+    margin-left: auto;
+  }
+}
+
+.presenting-list,
+.contacts-list,
+.imprassion-list,
+.visited-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.visited-list,
+.contacts-list {
+  @media (min-width: @tablet-width) {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.form__footnote {
+  font-size: 14px;
+  line-height: 26px;
+  font-weight: 400;
+  margin-left: auto;
+
+  @media (max-width: @mobile-width-only) {
+    display: none;
+  }
 }
