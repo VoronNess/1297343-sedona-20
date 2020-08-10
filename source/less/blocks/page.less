@@ -1,8 +1,17 @@
-.page {
+.page,
+.inner-page {
   font-family: @main-font;
   font-size: @main-font-size;
   line-height: @main-line-height;
   list-style: none;
   text-transform: uppercase;
   text-align: center;
+  height: 100%;
+}
+
+.page__body {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }

@@ -1,0 +1,28 @@
+.page-footer {
+  padding: 36px 0;
+}
+
+.page-footer__wrapper {
+  flex-wrap: wrap;
+  display: grid;
+  grid-template-rows: 1fr 1fr 1fr;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 64px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
+
+  @media (min-width: @desktop-width) {
+    margin: auto;
+    max-width: 960px;
+  }
+}
+
+.page-footer__item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+}
