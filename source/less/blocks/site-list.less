@@ -1,15 +1,107 @@
 .site-list {
   list-style: none;
-}
 
-@media (min-width: @tablet-width) {
-  .site-list {
-    width: 570px;
+  @media (min-width: @tablet-width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  @media (min-width: @desktop-width) {
+    width: 100%;
   }
 }
 
-@media (min-width: @desktop-width) {
-  .site-list {
-    width: 780px;
+.site-list__item {
+  @media (min-width: @tablet-width) {
+    margin-right: 32px;
+    color: @base-black;
+    background-color: @base-white;
+    width: 20%;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &--active {
+      color: @main-menu-active;
+      background-color: @base-white;
+    }
+
+    &--active:hover,
+    &--active:focus {
+      color: @main-menu-active-hover;
+      cursor: pointer;
+      background-color: @base-white;
+    }
+
+    &--active:active {
+      color: @main-menu-active-down;
+    }
+  }
+}
+
+.site-list__item a[href] {
+  &:hover,
+  &:focus {
+    background-color: @light-blue;
+  }
+
+  &:active {
+    background-color: @middle-blue;
+    color: fade(@base-white, 30%);
+  }
+
+  @media (min-width: @tablet-width) {
+    color: inherit;
+    background-color: @base-white;
+
+    &:hover,
+    &:focus {
+      color: @base-blue;
+      background-color: @base-white;
+    }
+
+    &:active {
+      color: fade(@base-black, 30%);
+      background-color: @base-white;
+    }
+  }
+}
+
+.site-list a {
+  position: relative;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 5px;
+  font-size: 18px;
+  line-height: 40px;
+  color: @base-white;
+  text-transform: uppercase;
+  text-decoration: none;
+  background-color: @base-blue;
+  border-top: @mobile-menu-white-shadow;
+  border-bottom: @mobile-menu-dark-shadow;
+
+  &:hover,
+  &:focus {
+    background-color: @light-blue;
+  }
+
+  @media (min-width: @tablet-width) {
+    color: inherit;
+    background-color: @base-white;
+    border-top: none;
+    border-bottom: none;
+    font-size: 14px;
+    line-height: 26px;
+    padding-top: 16px;
+    padding-bottom: 14px;
+
+    &:hover,
+    &:focus {
+      background-color: @base-white;
+    }
   }
 }

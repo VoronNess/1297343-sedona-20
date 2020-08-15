@@ -3,3 +3,37 @@
   padding-top: 52px;
   padding-bottom: 67px;
 }
+
+.bg-page-intro {
+  background: url("../../img/bg-back-mobile@1x.jpg") center no-repeat;
+  width: 100%;
+  background-position: center -230px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-image: url("../../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 100%;
+    bottom: -10px;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 290px;
+    background-position: center -235px;
+    background-size: cover;
+  }
+
+  @media (min-width: @desktop-width) {
+    height: 301px;
+    background-position: center -330px;
+    background-size: cover;
+  }
+}

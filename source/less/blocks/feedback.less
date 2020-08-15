@@ -4,14 +4,14 @@
 }
 
 .feedback__header {
-  max-width: 306px;
+
   max-height: 151px;
   margin: auto;
   padding-bottom: 17px;
+  margin-top: 36px;
 
   @media (min-width: @tablet-width) {
     padding: 65px 0;
-    max-width: 435px;
     margin: auto;
   }
 
@@ -21,16 +21,29 @@
   }
 }
 
+.feedback__title {
+  font-size: 18px;
+  margin: 0;
+}
+
 .feedback__intro {
   font-size: 14px;
   line-height: 24px;
+  color: @brown;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 160px;
+
+    br {
+      display: none;
+    }
+  }
 }
 
 .feedback-form__wrapper {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 0 19px;
 
   @media (min-width: @tablet-width) {
     flex-direction: row;

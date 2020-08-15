@@ -3,6 +3,11 @@
   flex-wrap: wrap;
   margin: 0;
   padding: 0;
+  padding-top: 34px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0;
+  }
 }
 
 .social__list {
@@ -18,4 +23,29 @@
   margin-right: 6px;
   height: 48px;
   text-align: auto;
+}
+
+.social__link {
+  height: 48px;
+  width: 46px;
+  background-color: @base-blue;
+  fill: @base-white;
+
+  &:hover,
+  &:focus {
+    background-color: @light-blue;
+  }
+
+  &:active {
+    background-color: @middle-blue;
+    fill: fade(@base-white, 30%);
+  }
+}
+
+.social__link--twitter,
+.social__link--facebook,
+.social__link--youtube {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
