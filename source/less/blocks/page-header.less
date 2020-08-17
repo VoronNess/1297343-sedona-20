@@ -10,8 +10,21 @@
   color: @base-black;
   margin: 0;
   padding: 0;
+  position: relative;
 }
 
 .page-header__logo {
   height: 84px;
+  position: absolute;
+  left: 109px;
+  z-index: 0;
+
+  @media (min-width: @tablet-width) {
+    left: 333px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 549px;
+    z-index: 2;
+  }
 }

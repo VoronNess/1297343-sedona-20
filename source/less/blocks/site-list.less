@@ -4,7 +4,6 @@
   @media (min-width: @tablet-width) {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
     width: 100%;
   }
 
@@ -15,13 +14,12 @@
 
 .site-list__item {
   @media (min-width: @tablet-width) {
-    margin-right: 32px;
     color: @base-black;
     background-color: @base-white;
     width: 20%;
 
-    &:last-child {
-      margin-right: 0;
+    &:nth-child(2) {
+      margin-right: 146px;
     }
 
     &--active {
@@ -38,6 +36,12 @@
 
     &--active:active {
       color: @main-menu-active-down;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:nth-child(2) {
+      margin-right: 206px;
     }
   }
 }

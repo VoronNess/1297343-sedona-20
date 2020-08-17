@@ -3,12 +3,17 @@
   height: 389px;
   margin: 0;
   padding: 0;
+
+  @media (min-width: @tablet-width) {
+    background-size: cover;
+    height: 518px;
+  }
 }
 
 .welcome__wrapper {
   padding: 90px 0;
   position: relative;
-  width: 320px;
+
   margin: auto;
 
   &::after {
@@ -23,5 +28,14 @@
     background-size: cover;
     background-position: center 0;
     box-sizing: border-box;
+  }
+}
+
+.welcome__text {
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    width: 461px;
+    height: 350px;
   }
 }
