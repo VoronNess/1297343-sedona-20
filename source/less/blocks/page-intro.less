@@ -1,5 +1,54 @@
+.page-intro {
+  background: url("../../img/bg-back-mobile@1x.jpg") center no-repeat;
+  height: 158px;
+  margin: 0;
+  padding: 0;
+
+  @media (min-width: @tablet-width) {
+    background-size: cover;
+    height: 290px;
+  }
+
+  @media (min-width: @tablet-width) {
+    height: 301px;
+  }
+}
+
 .page-intro__wrapper {
-  margin: auto;
   padding-top: 52px;
-  padding-bottom: 67px;
+  position: relative;
+  margin: auto;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 95px;
+  }
+
+  @media (min-width: @tablet-width) {
+    padding-top: 101px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -61px;
+    left: 0;
+    width: 100%;
+    background: url("../../img/bg-intro-triangle-mobile.svg");
+    background-repeat: no-repeat;
+    height: 30px;
+    background-size: cover;
+    background-position: center 0;
+    box-sizing: border-box;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.page-intro__text {
+  @media (min-width: @tablet-width) {
+    height: 78px;
+    width: 457px;
+  }
 }

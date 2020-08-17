@@ -4,34 +4,132 @@
 }
 
 .deep-advantages__wrapper {
+  padding: 0 26px;
+  padding-top: 26px;
+
   @media (min-width: @tablet-width) {
-    padding: 0 36px;
+    padding: 0 30px;
     padding-top: 158px;
     padding-bottom: 59px;
   }
 
   @media (min-width: @desktop-width) {
     margin: auto;
-    max-width: 960px;
     padding-bottom: 80px;
+    padding-left: 58px;
+    padding-right: 58px;
   }
 }
 
 .deep-advantages__item {
   text-align: left;
-  padding: 0 16px;
+  position: relative;
+  padding-left: 60px;
 
   @media (min-width: @tablet-width) {
     text-align: center;
+    padding-left: 0;
+  }
+}
+
+.deep-advantages__item--house {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  fill: @base-blue;
+  width: 39px;
+  height: 37px;
+  top: -10px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 75px;
+    height: 72px;
+    top: -100px;
+    left: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 140px;
+  }
+}
+
+.deep-advantages__item--souvenirs {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  fill: @base-blue;
+  width: 32px;
+  height: 38px;
+  top: -10px;
+  left: 5px;
+
+  @media (min-width: @tablet-width) {
+    width: 76px;
+    height: 68px;
+    top: -100px;
+    left: 80px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 140px;
+  }
+}
+
+.deep-advantages__item--food {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  fill: @base-blue;
+  width: 40px;
+  height: 34px;
+  top: -5px;
+  left: 0;
+
+  @media (min-width: @tablet-width) {
+    width: 64px;
+    height: 75px;
+    top: -100px;
+    left: 85px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 150px;
+  }
+}
+
+.deep-advantages__item--last-tablet {
+  @media (min-width: @tablet-width) {
+    order: 20;
   }
 }
 
 .deep-advantages__list {
   list-style: none;
   text-align: left;
+  padding: 0;
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+.deep-advantages__title {
+  font-size: 18px;
+  line-height: 26px;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.deep-advantages__description {
+  margin: 0;
+  margin-bottom: 26px;
+
+  @media (min-width: @tablet-width) {
+    br {
+      display: none;
+    }
+    padding: 0 20px;
   }
 }
