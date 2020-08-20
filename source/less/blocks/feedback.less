@@ -3,12 +3,27 @@
   line-height: 26px;
 }
 
-.feedback__header {
 
+.feedback__header {
   max-height: 151px;
   margin: auto;
   padding-bottom: 17px;
   margin-top: 36px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @middle-grey;
+    height: 1px;
+    width: 320px;
+    bottom: 0;
+    left: 0;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
     padding: 65px 0;
@@ -24,75 +39,59 @@
 .feedback__title {
   font-size: 18px;
   margin: 0;
+
+  @media (min-width: @tablet-width) {
+    font-size: 30px;
+  }
 }
 
 .feedback__intro {
+  margin: 0;
   font-size: 14px;
   line-height: 24px;
   color: @brown;
 
   @media (min-width: @tablet-width) {
     padding: 0 160px;
+    margin-top: 40px;
 
     br {
       display: none;
     }
   }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 380px;
+  }
+}
+
+.feedback-form {
+  padding: 0 20px;
+  margin-bottom: 48px;
+  margin-top: 20px;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 60px;
+    margin-bottom: 61px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 120px;
+    margin-bottom: 66px;
+  }
 }
 
 .feedback-form__wrapper {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
+  margin: 0;
 
   @media (min-width: @tablet-width) {
+    display: flex;
     flex-direction: row;
-    padding: 0 60px;
+    flex-wrap: wrap;
   }
 
   @media (min-width: @desktop-width) {
     margin: auto;
-    max-width: 960px;
-  }
-}
-
-.imprassion {
-  @media (min-width: @tablet-width) {
-    order: -1;
-    width: 300px;
-  }
-}
-
-.contacts,
-.visited,
-.emotions {
-  @media (min-width: @tablet-width) {
-    width: 100%;
-    padding-bottom: 20px;
-    padding-top: 20px;
-  }
-}
-
-.presenting {
-  @media (min-width: @tablet-width) {
-    margin-left: auto;
-  }
-}
-
-.presenting-list,
-.contacts-list,
-.imprassion-list,
-.visited-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.visited-list,
-.contacts-list {
-  @media (min-width: @tablet-width) {
-    display: flex;
-    justify-content: center;
   }
 }
 

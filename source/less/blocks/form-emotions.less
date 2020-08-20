@@ -1,0 +1,54 @@
+.emotions {
+  border: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 51px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @middle-grey;
+    height: 1px;
+    width: 320px;
+    top: -35px;
+    left: -20px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
+}
+
+.emotions_title {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+  margin-bottom: 15px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 55px;
+  }
+}
+
+.emotions__message {
+  margin: 0;
+  padding: 0;
+  background-color: @base-grey;
+  border: none;
+  padding-top: 13px;
+  padding-right: 23px;
+  padding-left: 21px;
+  box-sizing: border-box;
+  min-width: 279px;
+  min-height: 160px;
+  display: flex;
+
+  @media (min-width: @tablet-width) {
+    min-width: 648px;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 960px;
+  }
+}

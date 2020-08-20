@@ -81,17 +81,19 @@
             <fieldset class="presenting form__item">
               <legend class="presenting__title">Представьтесь:</legend>
               <ul class="presenting-list">
-                <li>
-                  <label for="presenting-name">Имя<sup>*</sup>:</label>
-                  <input class="form-input" id="presenting-name" type="text" name="user" placeholder="Петр">
+                <li class="presenting-list__item">
+                  <label class="presenting__label" for="presenting-name">Имя<sup>*</sup>:</label>
+                  <input class="presenting__input form-input" id="presenting-name" type="text" name="user"
+                    placeholder="Петр">
                 </li>
-                <li>
-                  <label for="presenting-surname">Фамилия<sup>*</sup>:</label>
-                  <input class="form-input" id="presenting-surname" type="text" name="surname" placeholder="Иванов">
+                <li class="presenting-list__item">
+                  <label class="presenting__label" for="presenting-surname">Фамилия<sup>*</sup>:</label>
+                  <input class="presenting__input form-input" id="presenting-surname" type="text" name="surname"
+                    placeholder="Иванов">
                 </li>
-                <li>
-                  <label for="presenting-patronymic">Отчество:</label>
-                  <input class="form-input" id="presenting-patronymic" type="text" name="patronymic"
+                <li class="presenting-list__item">
+                  <label class="presenting__label" for="presenting-patronymic">Отчество:</label>
+                  <input class="presenting__input form-input" id="presenting-patronymic" type="text" name="patronymic"
                     placeholder="Александрович">
                 </li>
               </ul>
@@ -99,12 +101,13 @@
             <fieldset class="contacts form__item">
               <legend class="contacts__title">Контактная информация:</legend>
               <ul class="contacts-list">
-                <li>
-                  <label for="contacts-tel">Контактный телефон<sup>*</sup>:</label>
+                <li class="contacts-list__item contacts-item__tel">
+                  <label class="contact__label" for="contacts-tel"><span class="display-none">Контактный
+                    </span>телефон<sup>*</sup>:</label>
                   <input class="form-input" id="contacts-tel" type="number" name="tel" placeholder="Введите телефон">
                 </li>
-                <li>
-                  <label for="contacts-email">Электронная почта<sup>*</sup>:</label>
+                <li class="contacts-list__item contacts-item__email">
+                  <label class="contact__label" for="contacts-email">Электронная почта<sup>*</sup>:</label>
                   <input class="form-input" id="contacts-email" type="email" name="email" placeholder="Введите e-mail">
                 </li>
               </ul>
@@ -112,45 +115,51 @@
             <fieldset class="imprassion form__item">
               <legend class="imprassion__title">Ваше общее впечатление:</legend>
               <ul class="imprassion-list">
-                <li>
-                  <input type="radio" name="imprassion-group" value="positive" id="filter-positive" checked>
-                  <label for="filter-positive">Скорее положительное</label>
+                <li class="imprassion-list__item">
+                  <input class="visually-hidden impression-input--radio" type="radio" name="imprassion-group"
+                    value="positive" id="filter-positive" checked>
+                  <label class="imprassion__label" for="filter-positive">Скорее положительное</label>
                 </li>
-                <li>
-                  <input type="radio" name="imprassion-group" value="negative" id="filter-negative">
-                  <label for="filter-negative">Скорее отрицательное</label>
+                <li class="imprassion-list__item">
+                  <input class="visually-hidden impression-input--radio" type="radio" name="imprassion-group"
+                    value="negative" id="filter-negative">
+                  <label class="imprassion__label" for="filter-negative">Скорее отрицательное</label>
                 </li>
-                <li>
-                  <input type="radio" name="imprassion-group" value="negative" id="filter-difficult">
-                  <label for="filter-difficult">затрудняюсь ответить</label>
+                <li class="imprassion-list__item">
+                  <input class="visually-hidden impression-input--radio" type="radio" name="imprassion-group"
+                    value="negative" id="filter-difficult">
+                  <label class="imprassion__label" for="filter-difficult">Затрудняюсь ответить</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="visited form__item">
-              <legend class="visited__title">Посещенные достопримечательности:</legend>
+              <legend class="visited__title">Посещенные<br>достопримечательности:</legend>
               <ul class="visited-list">
-                <li>
-                  <input type="checkbox" name="bridge" id="filter-bridge" checked>
-                  <label for="filter-bridge">Мост Дьявола</label>
+                <li class="visited-list__item">
+                  <input class="visually-hidden visited-input__checkbox" type="checkbox" name="bridge"
+                    id="filter-bridge" checked>
+                  <label class="visited__label" for="filter-bridge">Мост Дьявола</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="mountain" id="filter-mountain" checked>
-                  <label for="filter-mountain">Гора-Колокол</label>
+                <li class="visited-list__item">
+                  <input class="visually-hidden visited-input__checkbox" type="checkbox" name="mountain"
+                    id="filter-mountain" checked>
+                  <label class="visited__label" for="filter-mountain">Гора-Колокол</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="park" id="filter-park" checked>
-                  <label for="filter-park">Слайд-парк</label>
+                <li class="visited-list__item">
+                  <input class="visually-hidden visited-input__checkbox" type="checkbox" name="park" id="filter-park"
+                    checked>
+                  <label class="visited__label" for="filter-park">Слайд-парк</label>
                 </li>
-                <li>
-                  <input type="checkbox" name="rocks" id="filter-rocks">
-                  <label for="filter-rocks">Красные скалы</label>
+                <li class="visited-list__item">
+                  <input class="visually-hidden visited-input__checkbox" type="checkbox" name="rocks" id="filter-rocks">
+                  <label class="visited__label" for="filter-rocks">Красные скалы</label>
                 </li>
               </ul>
             </fieldset>
             <fieldset class="emotions form__item">
               <legend class="emotions_title">Опишите свои эмоции:</legend>
               <label class="visually-hidden" for="emotions-message"></label>
-              <textarea class="emotions-message" id="emotions-message" name="message" rows="1" cols="1"
+              <textarea class="emotions__message" id="emotions-message" name="message" rows="1" cols="1"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
             <button class="button filter-show" type="submit">Отправить отзыв</button>
