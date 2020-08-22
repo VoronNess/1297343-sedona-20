@@ -5,6 +5,21 @@
   padding: 0;
   margin-bottom: 51px;
 
+  @media (min-width: @tablet-width) {
+    margin-top: 46px;
+    margin-bottom: 57px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: @middle-grey;
+      height: 1px;
+      width: 123px;
+      top: 9px;
+      right: 0;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -15,7 +30,18 @@
     left: -20px;
 
     @media (min-width: @tablet-width) {
-      display: none;
+      top: 9px;
+      width: 123px;
+      left: 0;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    margin-top: 44px;
+
+    &::before,
+    &::after {
+      width: 280px;
     }
   }
 }
@@ -28,6 +54,7 @@
 
   @media (min-width: @tablet-width) {
     margin-bottom: 55px;
+    font-size: 21px;
   }
 }
 
@@ -46,9 +73,29 @@
 
   @media (min-width: @tablet-width) {
     min-width: 648px;
+    padding-top: 17px;
   }
 
   @media (min-width: @desktop-width) {
     min-width: 960px;
   }
+}
+
+.emotions__message:hover,
+.emotions__message :focus {
+  background-color: @light-grey;
+}
+
+.emotions__message:active {
+  background-color: @base-white;
+  border: 4px solid  @light-grey;
+  outline: none;
+}
+
+.emotions__message::placeholder {
+  font-family: @main-font;
+  color: @base-black;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 26px;
 }

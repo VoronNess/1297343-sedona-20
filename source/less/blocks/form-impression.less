@@ -1,13 +1,50 @@
-.imprassion__title {
-  font-weight: 700;
-  margin-bottom: 37px;
+.imprassion {
+  border: none;
+  position: relative;
+  margin: 0;
+  padding: 0;
+  margin-top: 36px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @middle-grey;
+    height: 1px;
+    width: 320px;
+    top: -22px;
+    left: -20px;
+
+    @media (min-width: @tablet-width) {
+      display: none;
+    }
+  }
 
   @media (min-width: @tablet-width) {
-    margin-bottom: 72px;
+    order: -1;
+    margin-top: 0;
+    width: 44%;
+    margin-right: 96px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 115px;
+    margin-right: 176px;
+    width: 40%;
+  }
+}
+
+.imprassion__title {
+  font-weight: 700;
+  margin-bottom: 36px;
+
+  @media (min-width: @tablet-width) {
+    margin-bottom: 72px;
+    font-size: 21px;
+    padding: 0;
+    padding-right: 13px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 60px;
   }
 }
 
@@ -23,22 +60,38 @@
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
   }
+
+  @media (min-width: @desktop-width) {
+    margin-left: 0;
+  }
 }
 
 .imprassion__label {
   position: relative;
+  text-transform: none;
+  font-weight: 700;
+  padding-left: 55px;
+
+  @media (min-width: @tablet-width) {
+    display: flex;
+    padding-left: 75px;
+  }
 }
 
 .impression-input--radio + .imprassion__label::before {
   content: "";
   position: absolute;
   background-color: @base-grey;
-  height: 48px;
-  width: 48px;
-  top: -15px;
-  left: -35px;
+  height: 55px;
+  width: 55px;
+  top: -17px;
+  left: -22px;
   border-radius: 50%;
-  border: 5px solid @base-grey;
+
+  @media (min-width: @tablet-width) {
+    left: -2px;
+    top: -17px;
+  }
 }
 
 .impression-input--radio:focus + .imprassion__label::before,
@@ -58,53 +111,15 @@
   background-color: @radio-button;
   height: 21px;
   width: 21px;
-  top: 2px;
-  left: -16px;
+  top: 0;
+  left: -4px;
   border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 17px;
+  }
 }
 
 .impression-input--radio:checked:active + .imprassion__label::after {
   background-color: @radio-button-down;
-}
-
-.imprassion {
-  border: none;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  margin-top: 20px;
-  margin-bottom: 17px;
-
-  &::after {
-    content: "";
-    position: absolute;
-    background-color: @middle-grey;
-    height: 1px;
-    width: 320px;
-    top: -20px;
-    left: -20px;
-
-    @media (min-width: @tablet-width) {
-      display: none;
-    }
-  }
-
-
-  label {
-    text-transform: none;
-    font-weight: 700;
-    padding-left: 40px;
-  }
-
-  @media (min-width: @tablet-width) {
-    order: -1;
-    margin-top: 0;
-    width: 44%;
-    margin-right: 92px;
-  }
-
-  @media (min-width: @desktop-width) {
-    margin-right: 192px;
-    width: 40%;
-  }
 }

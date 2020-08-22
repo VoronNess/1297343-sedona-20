@@ -32,7 +32,7 @@
   }
 
   @media (min-width: @tablet-width) {
-    padding-bottom: 53px;
+    padding-bottom: 34px;
     padding-top: 44px;
     max-width: 520px;
     margin: auto;
@@ -43,9 +43,9 @@
   }
 
   @media (min-width: @desktop-width) {
-    padding-bottom: 41px;
+    padding: 0;
+    padding-bottom: 23px;
     padding-top: 55px;
-    max-width: 483px;
     margin: auto;
   }
 }
@@ -54,7 +54,9 @@
   margin: 0;
   margin-top: 32px;
 
-  @media (max-width: @tablet-width) {
+  @media (min-width: @tablet-width) {
+    margin-top: 0;
+
     br {
       display: none;
     }
@@ -62,13 +64,11 @@
 }
 
 .advantages__intro {
-  @media (max-width: @tablet-width) {
-    br {
-      display: none;
-    }
-  }
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
 
-  @media (max-width: @desktop-width) {
+  @media (min-width: @tablet-width) {
     br {
       display: none;
     }
@@ -77,17 +77,21 @@
 
 .advantages__title {
   font-weight: 700;
-  font-size: 21px;
+  font-size: 18px;
   line-height: 26px;
   margin: 0;
   padding: 0;
-  padding-top: 39px;
-  padding-bottom: 18px;
+  padding-top: 30px;
+  padding-bottom: 12px;
 
   @media (max-width: @mobile-width-only) {
     br {
       display: none;
     }
+  }
+
+  @media (min-width: @tablet-width) {
+    font-size: 21px;
   }
 }
 
@@ -143,6 +147,26 @@
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 2fr;
+
+    .advantages__title {
+      padding-top: 40px;
+      padding-bottom: 0;
+    }
+
+    .advantages__description {
+      padding: 0;
+      margin-bottom: 48px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__title {
+      padding-top: 47px;
+    }
+
+    .advantages__description {
+      margin-bottom: 62px;
+    }
   }
 }
 
@@ -160,9 +184,38 @@
   margin: 0;
   padding: 0;
 
+  .advantages__title {
+    padding-top: 40px;
+  }
+
+  .advantages__description {
+    padding-bottom: 35px;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 2fr 1fr;
+    padding-top: 0;
+
+    .advantages__title {
+      padding-top: 42px;
+    }
+
+    .advantages__description {
+      padding-bottom: 45px;
+      padding-top: 20px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__title {
+      padding-top: 51px;
+    }
+
+    .advantages__description {
+      padding-bottom: 57px;
+      padding-top: 20px;
+    }
   }
 }
 
@@ -176,35 +229,86 @@
   background-color: @base-lightkgrey;
   margin: 0;
   padding: 0;
+  padding-bottom: 5px;
+
+  .advantages__title {
+    padding-top: 27px;
+  }
+
 
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 0 33px;
+    padding-top: 11px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-bottom: 22px;
   }
 }
 
 .advantages-others__description {
   color: @brown;
-  padding-top: 20px;
-  padding-bottom: 29px;
+  padding: 0 37px;
+  padding-top: 17px;
+  padding-bottom: 21px;
+
+  @media (min-width: @tablet-width) {
+    padding-bottom: 40px;
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+}
+
+.advantages-others__item {
   position: relative;
 
   @media (min-width: @tablet-width) {
-    br {
-      display: none;
+    &:first-child {
+      .advantages__title {
+        padding-right: 45px;
+      }
+
+      .advantages__description {
+        padding-left: 0;
+        padding-top: 0;
+        padding-bottom: 60px;
+        padding-right: 45px;
+      }
     }
-    padding-left: 40px;
-    padding-right: 40px;
+
+    &:last-child {
+      .advantages__title {
+        padding-left: 45px;
+      }
+
+      .advantages__description {
+        padding-right: 15px;
+        padding-left: 55px;
+        padding-bottom: 40px;
+        padding-top: 25px;
+      }
+    }
   }
 
-  &::after {
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      .advantages__description {
+        padding-left: 10px;
+        padding-right: 90px;
+        padding-bottom: 40px;
+      }
+    }
+  }
+
+  &:not(:last-child)::after {
     content: "";
     position: absolute;
     background-color: @middle-grey;
     height: 1px;
     width: 280px;
-    bottom: 0;
+    top: 166px;
     left: 20px;
 
     @media (min-width: @tablet-width) {
