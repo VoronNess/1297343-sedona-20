@@ -8,4 +8,15 @@
   border: none;
   text-decoration: none;
   min-height: 58px;
+  width: 100%;
+  font-family: @main-font;
+
+  @media (min-width: @tablet-width) {
+    max-width: 324px;
+    padding: 0;
+  }
+
+  @media (min-width: @desktop-width) {
+    min-width: 480px;
+  }
 }

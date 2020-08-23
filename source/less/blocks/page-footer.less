@@ -1,5 +1,17 @@
+.page-main ~ .page-footer {
+  padding-top: 32px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 30px;
+  }
+}
+
 .page-footer {
   padding-top: 38px;
+
+  @media (min-width: @tablet-width) {
+    padding-top: 36px;
+  }
 }
 
 .page-footer__wrapper {
@@ -29,12 +41,24 @@
   margin: 0;
 
   @media (min-width: @tablet-width) {
-    &:nth-child(1) {
+    &:first-child {
       justify-content: flex-start;
+      padding-left: 7px;
+      padding-top: 3px;
     }
 
     &:last-child {
       justify-content: flex-end;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &:first-child {
+      padding-left: 0;
+    }
+
+    &:last-child {
+      padding-right: 39px;
     }
   }
 }
