@@ -39,9 +39,15 @@
         </ul>
       </div>
     </nav>
-    <a class="page-header__logo" href="index.html">
-      <img src="img/logo-sedona-mobile.svg" width="102" height="84" alt="город «Седона»">
-    </a>
+    <div class="logo__wrapper">
+      <a class="page-header__logo-link" href="index.html">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
+          <img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="город «Седона»">
+        </picture>
+      </a>
+    </div>
   </header>
   <script>
     var navMain = document.querySelector('.main-nav');
@@ -60,9 +66,13 @@
     });
   </script>
   <main class="inner-page">
-    <div class="page-intro bg-page-intro">
+    <div class="page-intro">
       <div class="page-intro__wrapper">
-        <img class="page-intro__text" src="img/text-sedona.svg" width="229" height="39" alt="Седона">
+        <picture>
+          <source media="(min-width: 1200px)" srcset="img/text-sedona-inner-desktop.svg">
+          <source media="(min-width: 768px)" srcset="img/text-sedona-inner-tablet.svg">
+          <img class="page-intro__text" src="img/text-sedona-inner-mobile.svg" width="229" height="39" alt="Седона">
+        </picture>
       </div>
     </div>
     <section class="photo-video">
@@ -74,8 +84,15 @@
       <div class="photo">
         <div class="photo__wrapper">
           <div class="photo__item photo__first">
-            <img class="photo__first-img" src="img/photo-sunset-mobile@1x.jpg" width="280" height="280"
-              alt="Вид на дорогу уходящую к горам во время захода солнца">
+            <picture>
+              <source media="(min-width: 1200px)"
+                srcset="img/photo-sunset-desktop@1x.jpg 1x, img/photo-sunset-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                srcset="img/photo-sunset-tablet@1x.jpg 1x, img/photo-sunset-tablet@2x.jpg 2x">
+              <img class="photo__first-img" src="img/photo-sunset-mobile@1x.jpg"
+                srcset="img/photo-sunset-mobile@2x.jpg 2x" width="280" height="280"
+                alt="Вид на дорогу уходящую к горам во время захода солнца">
+            </picture>
             <div class="photo-text__wrapper ">
               <div class="photo-text__wrapper--desktop">
                 <h3 class="photo__title">Неродные просторы</h3>
@@ -97,8 +114,14 @@
           </div>
           <ul class="photo__list">
             <li class="photo__item">
-              <img class="photo__img" src="img/photo-cactus-mobile@1x.jpg" width="280" height="280"
-                alt="Необычный местный какутус на фоне красных скал и зелени">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-cactus-desktop@1x.jpg 1x, img/photo-cactus-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-cactus-tablet@1x.jpg 1x, img/photo-cactus-tablet@2x.jpg 2x">
+                <img class="photo__img" src="img/photo-cactus-mobile@1x.jpg" srcset="img/photo-cactus-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Необычный местный какутус на фоне красных скал и зелени">
+              </picture>
               <div class="photo-text__wrapper">
                 <div class="photo-text__wrapper--desktop">
                   <h3 class="photo__title">Местная растительность</h3>
@@ -119,8 +142,14 @@
               </div>
             </li>
             <li class="photo__item">
-              <img class="photo__img" src="img/photo-roads-mobile@1x.jpg" width="280" height="280"
-                alt="Вид на горную извилистую дорогу, утапающую в зелени">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-roads-desktop@1x.jpg 1x, img/photo-roads-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-roads-tablet@1x.jpg 1x, img/photo-roads-tablet@2x.jpg 2x">
+                <img class="photo__img" src="img/photo-roads-mobile@1x.jpg" srcset="img/photo-roads-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Вид на горную извилистую дорогу, утапающую в зелени">
+              </picture>
               <div class="photo-text__wrapper">
                 <div class="photo-text__wrapper--desktop">
                   <h3 class="photo__title">Дорога на север</h3>
@@ -141,8 +170,14 @@
               </div>
             </li>
             <li class="photo__item">
-              <img class="photo__img" src="img/photo-bridge-mobile@1x.jpg" width="280" height="280"
-                alt="Вид на красные горы и зеленую долину между ними">
+              <picture>
+                <source media="(min-width: 1200px)"
+                  srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)"
+                  srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+                <img class="photo__img" src="img/photo-bridge-mobile@1x.jpg" srcset="img/photo-bridge-mobile@2x.jpg 2x"
+                  width="280" height="280" alt="Вид на красные горы и зеленую долину между ними">
+              </picture>
               <div class="photo-text__wrapper">
                 <div class="photo-text__wrapper--desktop">
                   <h3 class="photo__title">Мост Дьявола</h3>

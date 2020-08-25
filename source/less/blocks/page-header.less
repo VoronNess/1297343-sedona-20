@@ -19,7 +19,7 @@
   min-height: 56px;
 }
 
-.page-header__logo {
+.page-header__logo-link {
   height: 84px;
   position: absolute;
   left: 109px;
@@ -29,7 +29,14 @@
   }
 
   @media (min-width: @desktop-width) {
-    left: 549px;
+    left: 505px;
     z-index: 2;
+  }
+}
+
+.page-header__logo {
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 97px;
   }
 }
