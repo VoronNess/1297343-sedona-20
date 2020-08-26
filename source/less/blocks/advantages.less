@@ -17,18 +17,18 @@
 
 .advantages__header {
   padding: 0 17px;
-  padding-bottom: 35px;
+  padding-bottom: 13px;
   position: relative;
 
   &::after {
     content: "";
     position: absolute;
-    bottom: -15px;
+    bottom: -19px;
     left: 0;
-    background: url("../../img/bg-intro-triangle-mobile-blue.svg");
+    background: url("../../img/triangle2-mobile.svg");
     background-repeat: no-repeat;
     height: 40px;
-    width: 100%;
+    width: 320px;
   }
 
   @media (min-width: @tablet-width) {
@@ -142,18 +142,36 @@
   }
 }
 
-.advantages__img {
+.advantages__img-wrapper {
+  height: 260px;
+
   @media (min-width: @tablet-width) {
     height: 256px;
-    width: 512px;
+    width: 100%;
+    overflow: hidden;
   }
+}
+
+.advantages__img {
+  width: 100%;
+  height: 100%;
 
   @media (min-width: @desktop-width) {
-    width: 800px;
+    position: relative;
+    bottom: 68px;
+    height: auto;
+
+    @media (min-resolution: 2dppx) {
+      height: auto;
+    }
   }
 }
 
 .first-advantage {
+  .advantages__title {
+    padding-top: 50px;
+  }
+
   @media (min-width: @tablet-width) {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -242,6 +260,13 @@
     }
   }
 }
+
+.second__img {
+  @media (min-width: @desktop-width) {
+    bottom: 14px;
+  }
+}
+
 
 .second-advantage__img {
   @media (min-width: @tablet-width) {
