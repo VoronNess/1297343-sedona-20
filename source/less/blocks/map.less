@@ -9,3 +9,55 @@
     width: 1200px;
   }
 }
+
+.map__wrapper {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @base-white;
+    width: 27px;
+    height: 27px;
+    top: 161px;
+    left: 146px;
+    border-radius: 50%;
+    z-index: 5;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @base-blue;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    top: 166px;
+    left: 151px;
+    z-index: 6;
+  }
+
+  @media (min-width: @tablet-width) {
+    &::before {
+      top: 164px;
+      left: 370px;
+    }
+
+    &::after {
+      top: 169px;
+      left: 375px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    &::before {
+      top: 162px;
+      left: 586px;
+    }
+
+    &::after {
+      top: 167px;
+      left: 591px;
+    }
+  }
+}
