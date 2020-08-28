@@ -26,14 +26,12 @@
   height: 40px;
   right: -45px;
 
-  path {
-    &:focus,
-    &:hover {
-      fill: @base-blue;
-    }
+  .copyright a[href]:focus &,
+  .copyright a[href]:hover & {
+    fill: @base-blue;
+  }
 
-    &:active {
-      fill: fade(@base-black, 30%);
-    }
+  .copyright a[href]:active & {
+    fill: fade(@base-black, 30%);
   }
 }
