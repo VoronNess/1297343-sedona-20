@@ -1,0 +1,42 @@
+
+.advatages__number {
+  position: relative;
+  margin: auto;
+  color: @brown;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @brown;
+    width: 9px;
+    height: 1px;
+    top: 10px;
+    left: -15px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    background-color: @brown;
+    width: 9px;
+    height: 1px;
+    top: 10px;
+    right: -15px;
+  }
+}
+
+.advatages__number--white {
+  &::before,
+  &::after {
+    background-color: @base-white;
+  }
+}
+
+.first-advantage .advatages__number,
+.second-advantage .advatages__number {
+  &::before,
+  &::after {
+    color: @base-white;
+  }
+  color: @base-white;
+}
