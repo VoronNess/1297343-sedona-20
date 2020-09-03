@@ -1,0 +1,38 @@
+.first-advantage {
+  .advantages__title {
+    padding-top: 50px;
+  }
+
+  @media (min-width: @tablet-width) {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    margin-bottom: 4px;
+
+    .advantages__title {
+      padding-top: 40px;
+      padding-bottom: 0;
+    }
+
+    .advantages__description {
+      padding: 0;
+      margin-bottom: 45px;
+      margin-top: 10px;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    .advantages__title {
+      padding-top: 47px;
+    }
+
+    .advantages__description {
+      margin-bottom: 58px;
+      padding-right: 32px;
+      padding-left: 32px;
+
+      br {
+        display: none;
+      }
+    }
+  }
+}

@@ -1,0 +1,149 @@
+
+.video-controls {
+  width: 280px;
+  height: 66px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: @base-grey;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    bottom: 0;
+    left: 60px;
+    width: 648px;
+    height: 93px;
+    background-color: transparent;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 200px;
+    bottom: 0;
+    width: 800px;
+  }
+}
+
+.video-controls__item {
+  &:first-child {
+    margin-left: 19px;
+    margin-bottom: 5px;
+    margin-right: auto;
+
+    @media (min-width: @tablet-width) {
+      margin-left: 29px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-left: 28px;
+    }
+  }
+
+  &:nth-child(2) {
+    margin-bottom: 3px;
+  }
+
+  &:last-child {
+    margin-left: 31px;
+    margin-right: 29px;
+
+    @media (min-width: @tablet-width) {
+      margin-right: 47px;
+      margin-bottom: 3px;
+    }
+
+    @media (min-width: @desktop-width) {
+      margin-right: 49px;
+    }
+  }
+}
+
+.video-repeat {
+  border: none;
+  fill: @mobile-controls-color;
+  width: 16px;
+  height: 20px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: @mobile-controls-hover;
+  }
+
+  &:active {
+    fill: @mobile-controls-down;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @base-white;
+
+    &:hover,
+    &:focus {
+      fill: fade(@base-white, 60%);
+    }
+
+    &:active {
+      fill: fade(@base-white, 30%);
+    }
+  }
+}
+
+.video-subtitle {
+  border: none;
+  fill: @mobile-controls-color;
+  width: 32px;
+  height: 20px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: @mobile-controls-hover;
+  }
+
+  &:active {
+    fill: @mobile-controls-down;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @base-white;
+
+    &:hover,
+    &:focus {
+      fill: fade(@base-white, 60%);
+    }
+
+    &:active {
+      fill: fade(@base-white, 30%);
+    }
+  }
+}
+
+.video-full {
+  border: none;
+  fill: @mobile-controls-color;
+  width: 20px;
+  height: 20px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: @mobile-controls-hover;
+  }
+
+  &:active {
+    fill: @mobile-controls-down;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @base-white;
+
+    &:hover,
+    &:focus {
+      fill: fade(@base-white, 60%);
+    }
+
+    &:active {
+      fill: fade(@base-white, 30%);
+    }
+  }
+}
