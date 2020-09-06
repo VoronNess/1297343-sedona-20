@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Туристический город «Седона», штат Аризона</title>
   <link href="css/styles.min.css" rel="stylesheet">
+  <link rel="preload" href="fonts/ptsans.woff2" as="fonts">
 </head>
 
 <body class="page__body page-container">
@@ -77,13 +78,13 @@
               <ul class="presenting-list">
                 <li class="presenting-list__item">
                   <label class="presenting__label" for="presenting-name">Имя<sup>*</sup>:</label>
-                  <input class="presenting__input form-input" id="presenting-name" type="text" name="user"
-                    placeholder="Петр">
+                  <input class="presenting__input name-input form-input" id="presenting-name" type="text" name="user"
+                    data-rule="name" placeholder="Петр">
                 </li>
                 <li class="presenting-list__item">
                   <label class="presenting__label" for="presenting-surname">Фамилия<sup>*</sup>:</label>
-                  <input class="presenting__input form-input" id="presenting-surname" type="text" name="surname"
-                    placeholder="Иванов">
+                  <input class="presenting__input surname-input form-input" id="presenting-surname" type="text"
+                    name="surname" data-rule="surname" placeholder="Иванов">
                 </li>
                 <li class="presenting-list__item">
                   <label class="presenting__label" for="presenting-patronymic">Отчество:</label>
@@ -98,11 +99,14 @@
                 <li class="contacts-list__item contacts-item__tel">
                   <label class="contact__label" for="contacts-tel"><span class="display-none">Контактный
                     </span>телефон<sup>*</sup>:</label>
-                  <input class="form-input" id="contacts-tel" type="number" name="tel" placeholder="Введите телефон">
+                  <input class="form-input tel-input" id="contacts-tel" type="tel" pattern="^[ 0-9]+$" name="tel"
+                    data-rule="tel" placeholder="Введите телефон">
                 </li>
                 <li class="contacts-list__item contacts-item__email">
                   <label class="contact__label" for="contacts-email">Электронная почта<sup>*</sup>:</label>
-                  <input class="form-input" id="contacts-email" type="email" name="email" placeholder="Введите e-mail">
+                  <input class="form-input email-input" id="contacts-email" type="email"
+                    pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" name="email" data-rule="email"
+                    placeholder="Введите e-mail">
                 </li>
               </ul>
             </fieldset>
@@ -156,7 +160,7 @@
               <textarea class="emotions__message" id="emotions-message" name="message" rows="1" cols="1"
                 placeholder="Опишите подробно все свои восторги"></textarea>
             </fieldset>
-            <button class="button feedback-show" type="submit">Отправить отзыв</button>
+            <button class="button form-submit feedback-show" type="submit">Отправить отзыв</button>
             <p class="form__footnote"><sup>*</sup> — обязательные поля</p>
           </div>
         </form>
@@ -205,23 +209,19 @@
     </div>
   </footer>
 
-  <section class="modal modal__error">
-    <div class="modal__wrapper modal__wrapper--error">
-      <h2 class="modal__title modal__title--error">Что-то пошло<br> не так!</h2>
-      <p class="modal__text modal__text--error">Проверьте поля, выделенные<br> красным, скорее всего вы<br> забыли их
-        заполнить</p>
-      <button class="button button__error button__close"> ok</button>
-    </div>
+  <section class="modal modal__mistake">
+    <h2 class="modal__title modal__title--mistake">Что-то пошло<br> не так!</h2>
+    <p class="modal__text modal__text--mistake">Проверьте поля, выделенные<br> красным, скорее всего вы<br> забыли их
+      заполнить</p>
+    <button class="button modal-close button__mistake"> ok</button>
   </section>
 
   <section class="modal modal__success">
-    <div class="modal__wrapper modal__wrapper--success">
-      <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
-      <p class="modal__text  modal__text--success">Спасибо за ваше участие, ваш<br>отзыв уже поступил к нам.<br> В
-        ближайшее время мы<br> опубликуем его на сайте.</p>
-      <div class="button-success__wrapper">
-        <button class="button button__success">Закрыть окно</button>
-      </div>
+    <h2 class="modal__title modal__title--success">Ваш отзыв отправлен!</h2>
+    <p class="modal__text  modal__text--success">Спасибо за ваше участие, ваш<br>отзыв уже поступил к нам.<br> В
+      ближайшее время мы<br> опубликуем его на сайте.</p>
+    <div class="button-success__wrapper">
+      <button class="button modal-close button__success">Закрыть окно</button>
     </div>
   </section>
   <script src="js/scripts.js"></script>

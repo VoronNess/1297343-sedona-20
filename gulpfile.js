@@ -12,7 +12,7 @@ const webp = require("gulp-webp");
 const svgstore = require("gulp-svgstore");
 const del = require("del");
 const htmlmin = require("gulp-htmlmin");
-
+const uglify = require("gulp-uglify");
 
 // Styles
 
@@ -63,6 +63,15 @@ const sprite = () => {
 };
 exports.sprite = sprite;
 
+//Js-min
+
+const scripts = () => {
+  return gulp.src("source/js/*.js")
+    .pipe(uglify())
+    .pipe(rename("script.min.js"))
+    .pipe(gulp.dest("build/js"));
+};
+exports.scripts = scripts;
 
 // Server
 
@@ -84,6 +93,7 @@ exports.server = server;
 const watcher = () => {
   gulp.watch("source/less/**/*.less", gulp.series("styles"));
   gulp.watch("source/*.html").on("change", sync.reload);
+  gulp.watch("source/*.js").on("change", sync.reload);
 };
 
 exports.default = gulp.series(
@@ -134,6 +144,7 @@ const build = gulp.series(
   sprite,
   html,
   htmlMinify,
+  scripts,
 );
 exports.build = build;
 

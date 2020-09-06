@@ -1,13 +1,15 @@
 .main-nav {
   padding: 0;
   margin: 0;
-  position: relative;
+  position: absolute;
   min-height: 56px;
   color: @base-white;
   background-color: @base-white;
+  width: 100%;
 
   @media (min-width: @tablet-width) {
     background-color: @base-white;
+    position: relative;
   }
 }
 
@@ -140,4 +142,9 @@
   .main-nav__wrapper {
     width: 100%;
   }
+}
+
+
+.main-nav--test {
+  position: relative;
 }

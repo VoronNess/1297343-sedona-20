@@ -8,51 +8,22 @@
   border: none;
   text-decoration: none;
   min-height: 58px;
-  width: 100%;
+
   font-family: @main-font;
 
   @media (min-width: @tablet-width) {
-    max-width: 324px;
     padding: 0;
+  }
+}
+
+.form-submit {
+  width: 100%;
+
+  @media (min-width: @tablet-width) {
+    max-width: 324px;
   }
 
   @media (min-width: @desktop-width) {
-    min-width: 480px;
-  }
-}
-
-
-.button__error {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 35px;
-  font-size: 18px;
-  max-width: 180px;
-  align-self: center;
-
-  @media (min-width: @tablet-width) {
-    margin-bottom: 49px;
-    max-width: 272px;
-    margin-top: auto;
-  }
-}
-
-.button-success__wrapper {
-  background-color: @base-grey;
-  min-height: 98px;
-
-  @media (min-width: @tablet-width) {
-    min-height: 146px;
-  }
-}
-
-.button__success {
-  max-width: 280px;
-  margin-top: 20px;
-  font-size: 18px;
-
-  @media (min-width: @tablet-width) {
-    margin-top: 44px;
-    max-width: 458px;
+    width: 480px;
   }
 }

@@ -29,3 +29,15 @@
   color: @base-black;
   font-weight: 700;
 }
+
+.error {
+  box-shadow: @red-shadow;
+
+  &:focus {
+    border: none;
+  }
+
+  &:invalid:focus {
+    border: none;
+  }
+}
