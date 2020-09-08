@@ -143,7 +143,6 @@ const build = gulp.series(
   createWebp,
   sprite,
   html,
-  htmlMinify,
   scripts,
 );
 exports.build = build;

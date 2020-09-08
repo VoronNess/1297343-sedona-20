@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Туристический город «Седона», штат Аризона</title>
   <link href="css/styles.min.css" rel="stylesheet">
-  <link rel="preload" href="fonts/ptsans.woff2" as="fonts">
+  <link rel="preload" href="fonts/ptsans.woff2" as="font">
 </head>
 
 <body class="page__body page-container">
@@ -73,8 +73,8 @@
         <h2 class="visually-hidden">Форма-отзыв</h2>
         <form class="feedback-form form" action="https://echo.htmlacademy.ru" method="post">
           <div class="feedback-form__wrapper">
-            <fieldset class="presenting form__item">
-              <legend class="presenting__title">Представьтесь:</legend>
+            <div class="presenting form__item">
+              <p class="presenting__title">Представьтесь:</p>
               <ul class="presenting-list">
                 <li class="presenting-list__item">
                   <label class="presenting__label" for="presenting-name">Имя<sup>*</sup>:</label>
@@ -92,9 +92,9 @@
                     placeholder="Александрович">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="contacts form__item">
-              <legend class="contacts__title">Контактная информация:</legend>
+            </div>
+            <div class="contacts form__item">
+              <p class="contacts__title">Контактная информация:</p>
               <ul class="contacts-list">
                 <li class="contacts-list__item contacts-item__tel">
                   <label class="contact__label" for="contacts-tel"><span class="display-none">Контактный
@@ -109,9 +109,9 @@
                     placeholder="Введите e-mail">
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="imprassion form__item">
-              <legend class="imprassion__title">Ваше общее впечатление:</legend>
+            </div>
+            <div class="imprassion form__item">
+              <p class="imprassion__title">Ваше общее впечатление:</p>
               <ul class="imprassion-list">
                 <li class="imprassion-list__item">
                   <input class="visually-hidden impression-input--radio" type="radio" name="imprassion-group"
@@ -129,9 +129,9 @@
                   <label class="imprassion__label" for="filter-difficult">Затрудняюсь ответить</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="visited form__item">
-              <legend class="visited__title">Посещенные<br>достопримечательности:</legend>
+            </div>
+            <div class="visited form__item">
+              <p class="visited__title">Посещенные<br>достопримечательности:</p>
               <ul class="visited-list">
                 <li class="visited-list__item">
                   <input class="visually-hidden visited-input__checkbox" type="checkbox" name="bridge"
@@ -153,13 +153,13 @@
                   <label class="visited__label" for="filter-rocks">Красные скалы</label>
                 </li>
               </ul>
-            </fieldset>
-            <fieldset class="emotions form__item">
-              <legend class="emotions_title">Опишите свои эмоции:</legend>
+            </div>
+            <div class="emotions form__item">
+              <p class="emotions_title">Опишите свои эмоции:</p>
               <label class="visually-hidden" for="emotions-message"></label>
               <textarea class="emotions__message" id="emotions-message" name="message" rows="1" cols="1"
                 placeholder="Опишите подробно все свои восторги"></textarea>
-            </fieldset>
+            </div>
             <button class="button form-submit feedback-show" type="submit">Отправить отзыв</button>
             <p class="form__footnote"><sup>*</sup> — обязательные поля</p>
           </div>

@@ -26,12 +26,25 @@ var formName = feedbackForm.querySelector("[name=user]");
 var formSurname = feedbackForm.querySelector("[name=surname]");
 var formEmail = feedbackForm.querySelector("[name=email]");
 var formTel = feedbackForm.querySelector("[name=tel]");
-var formInputs = feedbackForm.querySelectorAll("input[data-rule]");
 
+function inputValid (formTel, formEmail) {
+  if (!formName.value || !formSurname.value || !formEmail.value || !formTel.value) {
+    return false;
+  } else {
+    return true;
+  }
+};
 
 feedbackForm.addEventListener("submit", function (evt) {
-  if (!formName.value || !formSurname.value || !formEmail.value || !formTel.value) {
+  if (!inputValid(formTel, formEmail)) {
+    evt.preventDefault();
     mistakePopup.classList.add("modal-show");
+    formTel.classList.add("error");
+    formEmail.classList.add("error");
+    formName.classList.add("error");
+    formSurname.classList.add("error");
+
+
   } else {
     mistakePopup.classList.remove("modal-show");
     successPopup.classList.add("modal-show");
@@ -39,14 +52,6 @@ feedbackForm.addEventListener("submit", function (evt) {
   evt.preventDefault();
 });
 
-//попытка добавить тени на незаполненые инпуты
-/*for (let formInput of formInputs) {
-
-  var checkinput = formInput.value;
-  if (checkinput.length == 0) {
-    formInput.classList.add("error");
-  }
-};*/
 // Close mistake pop-up
 
 var mistakePopup = document.querySelector(".modal__mistake");
@@ -85,14 +90,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-//Map
-
-function initMap() {
-  var myLatLng = { lat: 34.8544438, lng: 111.8301578 };
-
-  var map = new google.maps.Map(document.getElementById("map"), {
-    disableDefaultUI: true,
-    center: myLatLng
-  });
-}

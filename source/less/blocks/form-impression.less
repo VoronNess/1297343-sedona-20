@@ -57,8 +57,16 @@
 .imprassion-list__item {
   margin-bottom: 43px;
 
+  &:last-child {
+    margin-bottom: 57px;
+  }
+
   @media (min-width: @tablet-width) {
     margin-bottom: 52px;
+
+    &:last-child {
+      margin-bottom: 52px;
+    }
   }
 
   @media (min-width: @desktop-width) {
@@ -106,12 +114,10 @@
 .impression-input--radio:focus + .imprassion__label::before,
 .impression-input--radio:hover + .imprassion__label::before {
   background-color: @light-grey;
-  border: 5px solid @light-grey;
 }
 
 .impression-input--radio:active + .imprassion__label::before {
   background-color: @base-middlegrey;
-  border: 5px solid @base-middlegrey;
 }
 
 .impression-input--radio:checked + .imprassion__label::after {
