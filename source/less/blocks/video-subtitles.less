@@ -1,0 +1,29 @@
+.video-subtitle {
+  border: none;
+  fill: @mobile-controls-color;
+  width: 32px;
+  height: 20px;
+  background-color: transparent;
+
+  &:hover,
+  &:focus {
+    fill: @mobile-controls-hover;
+  }
+
+  &:active {
+    fill: @mobile-controls-down;
+  }
+
+  @media (min-width: @tablet-width) {
+    fill: @base-white;
+
+    &:hover,
+    &:focus {
+      fill: fade(@base-white, 60%);
+    }
+
+    &:active {
+      fill: fade(@base-white, 30%);
+    }
+  }
+}

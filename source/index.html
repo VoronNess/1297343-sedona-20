@@ -9,7 +9,7 @@
   <link rel="preload" href="fonts/ptsans.woff2" as="font">
 </head>
 
-<body class="page__body page-container">
+<body class="page-body page-container">
   <header class="page-header">
     <nav class="main-nav main-nav--closed main-nav--nojs">
       <button class="main-nav__toggle" type="button">
@@ -40,12 +40,12 @@
         </ul>
       </div>
     </nav>
-    <div class="logo__wrapper">
-      <a class="page-header__logo-link">
+    <div class="main-logo">
+      <a class="main-logo__link">
         <picture>
           <source media="(min-width: 1200px)" srcset="img/logo-sedona-desktop.svg">
           <source media="(min-width: 768px)" srcset="img/logo-sedona-tablet.svg">
-          <img class="page-header__logo" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="город «Седона»">
+          <img class="main-logo__img" src="img/logo-sedona-mobile.svg" width="102" height="84" alt="город «Седона»">
         </picture>
       </a>
     </div>
@@ -76,7 +76,7 @@
           <li class="advantages__item first-advantage">
             <div class="blue-theme">
               <h3 class="advantages__title">Настоящий<br> городок</h3>
-              <span class="advatages__number advatages__number--white">№1</span>
+              <span class="advantages-number advantages-number--white">№1</span>
               <p class="advantages__description">
                 Седона не аттракцион для туристов, там <br>
                 течет своя жизнь</p>
@@ -102,7 +102,7 @@
               <div class="deep-advantages__wrapper">
                 <ul class="deep-advantages__list">
                   <li class="deep-advantages__item">
-                    <svg class="deep-advantages__item--house" width="74.695px" height="72.346px">
+                    <svg class="icon-house" width="74.695px" height="72.346px">
                       <use xlink:href="img/sprite.svg#icon-house"></use>
                     </svg>
                     <h3 class="deep-advantages__title">Жилье</h3>
@@ -111,16 +111,16 @@
                       настоящем мотеле, все как в<br>
                       кино!</p>
                   </li>
-                  <li class="deep-advantages__item deep-advantages__item--last-tablet">
-                    <svg class="deep-advantages__item--souvenirs" width="63px" height="75.084px">
+                  <li class="deep-advantages__item icon-last">
+                    <svg class="icon-souvenirs" width="63px" height="75.084px">
                       <use xlink:href="img/sprite.svg#icon-gift"></use>
                     </svg>
                     <h3 class="deep-advantages__title">Сувениры</h3>
-                    <p class="deep-advantages__description">Не только китайского, но&nbsp;и
-                      <br>&nbsp;местного производства!</p>
+                    <p class="deep-advantages__description">Не только китайского, но&nbsp;и&nbsp;
+                      <br>местного производства!</p>
                   </li>
                   <li class="deep-advantages__item">
-                    <svg class=" deep-advantages__item--food" width="76.166px" height="68.959px">
+                    <svg class="icon-food" width="76.166px" height="68.959px">
                       <use xlink:href="img/sprite.svg#icon-burger"></use>
                     </svg>
                     <h3 class="deep-advantages__title">Еда</h3>
@@ -136,7 +136,7 @@
           <li class="advantages__item  second-advantage">
             <div class="blue-theme">
               <h3 class="advantages__title">Там есть<br> мост дьявола</h3>
-              <span class="advatages__number advatages__number--white">№2</span>
+              <span class="advantages-number advantages-number--white">№2</span>
               <p class="advantages__description">
                 Да, по нему можно пройти! Если вы<br>
                 осмелитесь, конечно
@@ -153,17 +153,17 @@
                   srcset="img/main-bridge-desktop@1x.jpg 1x, img/main-bridge-desktop@2x.jpg 2x">
                 <source media="(min-width: 768px)"
                   srcset="img/main-bridge-tablet@1x.jpg 1x, img/main-bridge-tablet@2x.jpg 2x">
-                <img class="second__img advantages__img" src="img/main-bridge-mobile@1x.jpg"
+                <img class="second-img advantages__img" src="img/main-bridge-mobile@1x.jpg"
                   srcset="img/main-bridge-mobile@2x.jpg 2x" width="320" height="260"
                   alt="Вид на уникальный местный ландшафт">
               </picture>
             </div>
           </li>
         </ul>
-        <ul class="advantages__list advantages__others">
+        <ul class="advantages__list advantages-others">
           <li class="advantages__item advantages-others__item standart-theme">
             <h3 class="advantages__title">Небольшая<br> площадь</h3>
-            <span class="advatages__number">№3</span>
+            <span class="advantages-number">№3</span>
             <p class="advantages__description advantages-others__description">
               Все интересные места находятся<br>
               очень близко
@@ -171,7 +171,7 @@
           </li>
           <li class="advantages__item advantages-others__item standart-theme">
             <h3 class="advantages__title">Красивая<br> дорога</h3>
-            <span class="advatages__number">№4</span>
+            <span class="advantages-number">№4</span>
             <p class="advantages__description advantages-others__description">
               Ехать в Седону из Лас-Вегаса<br>
               совсем не скучно!
@@ -179,7 +179,7 @@
           </li>
           <li class="advantages__item advantages-others__item standart-theme">
             <h3 class="advantages__title">Мало<br> туристов</h3>
-            <span class="advatages__number">№5</span>
+            <span class="advantages-number">№5</span>
             <p class="advantages__description advantages-others__description">
               Большинство едет в Гранд Каньон<br>
               и толпится там
@@ -203,10 +203,10 @@
     <section class="map">
       <h2 class="visually-hidden">Карта расположения города Седона</h2>
       <div class="map__wrapper">
-        <iframe class="map-iframe" id="map"
+        <iframe class="map__iframe" id="map"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d419052.0229356343!2d-111.6200443011101!3d34.860148708411735!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x872da132f942b00d%3A0x5548c523fa6c8efd!2z0KHQtdC00L7QvdCwLCDQkNGA0LjQt9C-0L3QsCA4NjMzNiwg0KHQqNCQ!5e0!3m2!1sru!2sru!4v1599324421562!5m2!1sru!2sru"
           width="320" height="350" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
-        <div class="map-picture__wrapper">
+        <div class="map__picture">
           <picture>
             <source type="image/webp" media="(min-width: 1200px)"
               srcset="img/bg-map-desktop@1x.webp 1x, img/bg-map-desktop@2x.webp 2x">
@@ -215,7 +215,7 @@
             <source type="image/webp" srcset="img/bg-map-mobile@1x.webp 1x, img/bg-map-mobile@2x.webp 2x">
             <source media="(min-width: 1200px)" srcset="img/bg-map-desktop@1x.jpg 1x, img/bg-map-desktop@2x.jpg 2x">
             <source media="(min-width: 768px)" srcset="img/bg-map-tablet@1x.jpg 1x, img/bg-map-tablet@2x.jpg 2x">
-            <img class="map-picture" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320"
+            <img class="map__img" src="img/bg-map-mobile@1x.jpg" srcset="img/bg-map-mobile@2x.jpg 2x" width="320"
               height="350" alt="Карта с расположением города Седона, штат Аризона">
           </picture>
         </div>
@@ -255,7 +255,7 @@
       </div>
       <div class="copyright page-footer__item">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="copyright__link--academy" width="27px" height="34px">
+          <svg class="icon-academy" width="27px" height="34px">
             <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>

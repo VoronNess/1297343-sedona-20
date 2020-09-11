@@ -44,15 +44,16 @@
   }
 }
 
-.second__img {
-  @media (min-width: @desktop-width) {
-    bottom: 14px;
-  }
-}
-
-
 .second-advantage__img {
   @media (min-width: @tablet-width) {
     order: -1;
   }
+}
+
+.second-advantage .advantages-number {
+  &::before,
+  &::after {
+    color: @base-white;
+  }
+  color: @base-white;
 }

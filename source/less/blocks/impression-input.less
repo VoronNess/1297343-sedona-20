@@ -1,0 +1,53 @@
+.impression-input + .impression__label::before {
+  content: "";
+  position: absolute;
+  background-color: @base-grey;
+  height: 55px;
+  width: 55px;
+  top: -17px;
+  left: -22px;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: -2px;
+    top: -17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 5px;
+    top: -15px;
+  }
+}
+
+.impression-input:focus + .impression__label::before,
+.impression-input:hover + .impression__label::before {
+  background-color: @light-grey;
+}
+
+.impression-input:active + .impression__label::before {
+  background-color: @base-middlegrey;
+}
+
+.impression-input:checked + .impression__label::after {
+  content: "";
+  position: absolute;
+  background-color: @radio-button;
+  height: 21px;
+  width: 21px;
+  top: 0;
+  left: -4px;
+  border-radius: 50%;
+
+  @media (min-width: @tablet-width) {
+    left: 17px;
+  }
+
+  @media (min-width: @desktop-width) {
+    left: 22px;
+    top: 3px;
+  }
+}
+
+.impression-input:checked:active + .impression__label::after {
+  background-color: @radio-button-down;
+}

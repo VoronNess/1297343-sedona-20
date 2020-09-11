@@ -22,6 +22,24 @@
   }
 }
 
+.deep-advantages__description {
+  margin: 0;
+
+
+  @media (min-width: @tablet-width) {
+    padding: 0 40px;
+
+    br {
+      display: none;
+    }
+  }
+
+  @media (min-width: @desktop-width) {
+    padding: 0 30px;
+  }
+}
+
+
 .deep-advantages__item {
   text-align: left;
   position: relative;
@@ -54,7 +72,7 @@
 
       .deep-advantages__description {
         padding-right: 2px;
-        padding-left: 38px;
+        padding-left: 33px;
       }
     }
   }
@@ -78,86 +96,14 @@
       }
 
       .deep-advantages__description {
-        padding-right: 24px;
-        padding-left: 135px;
+        padding-right: 40px;
+        padding-left: 115px;
 
         br {
           display: none;
         }
       }
     }
-  }
-}
-
-.deep-advantages__item--house {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  fill: @base-blue;
-  width: 39px;
-  height: 37px;
-  top: -11px;
-  left: -4px;
-
-  @media (min-width: @tablet-width) {
-    width: 75px;
-    height: 72px;
-    top: -98px;
-    left: 60px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 102px;
-  }
-}
-
-.deep-advantages__item--souvenirs {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  fill: @base-blue;
-  width: 32px;
-  height: 38px;
-  top: -10px;
-  left: -1px;
-
-  @media (min-width: @tablet-width) {
-    width: 64px;
-    height: 75px;
-    top: -100px;
-    left: 105px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 185px;
-  }
-}
-
-.deep-advantages__item--food {
-  content: "";
-  position: absolute;
-  background-repeat: no-repeat;
-  fill: @base-blue;
-  width: 40px;
-  height: 34px;
-  top: -3px;
-  left: -8px;
-
-  @media (min-width: @tablet-width) {
-    width: 76px;
-    height: 68px;
-    top: -95px;
-    left: 80px;
-  }
-
-  @media (min-width: @desktop-width) {
-    left: 142px;
-  }
-}
-
-.deep-advantages__item--last-tablet {
-  @media (min-width: @tablet-width) {
-    order: 20;
   }
 }
 
@@ -181,22 +127,5 @@
   @media (min-width: @tablet-width) {
     font-size: 21px;
     margin-bottom: 22px;
-  }
-}
-
-.deep-advantages__description {
-  margin: 0;
-
-
-  @media (min-width: @tablet-width) {
-    padding: 0 40px;
-
-    br {
-      display: none;
-    }
-  }
-
-  @media (min-width: @desktop-width) {
-    padding: 0 30px;
   }
 }

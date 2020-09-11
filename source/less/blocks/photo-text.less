@@ -1,0 +1,28 @@
+.photo-text {
+  @media (min-width: @tablet-width) {
+    background-color: @base-grey;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    padding-top: 15px;
+  }
+
+  @media (min-width: @desktop-width) {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 400px;
+    height: 80px;
+    box-sizing: border-box;
+    background-color: fade(@base-black, 30%);
+    color: @base-white;
+  }
+}
+
+.photo-text__desktop {
+  @media (min-width: @desktop-width) {
+    display: flex;
+    flex-direction: column;
+  }
+}

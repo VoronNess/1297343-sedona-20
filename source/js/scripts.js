@@ -1,24 +1,3 @@
-//Main-menu
-var navMain = document.querySelector(".main-nav");
-var navToggle = document.querySelector(".main-nav__toggle");
-
-
-navMain.classList.remove("main-nav--nojs");
-
-navToggle.addEventListener("click", function () {
-  if (navMain.classList.contains("main-nav--closed")) {
-    navMain.classList.remove("main-nav--closed");
-    navMain.classList.add("main-nav--opened");
-    navMain.classList.add("main-nav--test");
-
-
-  } else {
-    navMain.classList.add("main-nav--closed");
-    navMain.classList.remove("main-nav--opened");
-    navMain.classList.remove("main-nav--test");
-  }
-});
-
 //Form-Notifications
 
 var feedbackForm = document.querySelector(".feedback-form");
@@ -38,7 +17,7 @@ function inputValid (formTel, formEmail) {
 feedbackForm.addEventListener("submit", function (evt) {
   if (!inputValid(formTel, formEmail)) {
     evt.preventDefault();
-    mistakePopup.classList.add("modal-show");
+    mistakePopup.classList.add("modal__show");
     formTel.classList.add("error");
     formEmail.classList.add("error");
     formName.classList.add("error");
@@ -46,8 +25,8 @@ feedbackForm.addEventListener("submit", function (evt) {
 
 
   } else {
-    mistakePopup.classList.remove("modal-show");
-    successPopup.classList.add("modal-show");
+    mistakePopup.classList.remove("modal__show");
+    successPopup.classList.add("modal__show");
   }
   evt.preventDefault();
 });
@@ -59,14 +38,14 @@ var mistakeClose = mistakePopup.querySelector(".modal-close");
 
 mistakeClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  mistakePopup.classList.remove("modal-show");
+  mistakePopup.classList.remove("modal__show");
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (mistakePopup.classList.contains("modal-show")) {
+    if (mistakePopup.classList.contains("modal__show")) {
       evt.preventDefault();
-      mistakePopup.classList.remove("modal-show");
+      mistakePopup.classList.remove("modal__show");
     }
   }
 });
@@ -77,15 +56,15 @@ var successClose = successPopup.querySelector(".modal-close");
 
 successClose.addEventListener("click", function (evt) {
   evt.preventDefault();
-  successPopup.classList.remove("modal-show");
+  successPopup.classList.remove("modal__show");
   window.location.reload()
 });
 
 window.addEventListener("keydown", function (evt) {
   if (evt.keyCode === 27) {
-    if (successPopup.classList.contains("modal-show")) {
+    if (successPopup.classList.contains("modal__show")) {
       evt.preventDefault();
-      successPopup.classList.remove("modal-show");
+      successPopup.classList.remove("modal__show");
       window.location.reload()
     }
   }

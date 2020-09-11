@@ -67,7 +67,7 @@
   }
 }
 
-.visited-list {
+.visited__list {
   padding: 0;
   margin: 0;
   display: flex;
@@ -92,7 +92,7 @@
   }
 }
 
-.visited-list__item {
+.visited__list-item {
   margin-bottom: 54px;
 
   @media (min-width: @tablet-width) {
@@ -111,48 +111,4 @@
   text-transform: none;
   font-weight: 700;
   position: relative;
-}
-
-.visited-input__checkbox + .visited__label::before {
-  content: "";
-  position: absolute;
-  background-color: @base-grey;
-  height: 55px;
-  width: 55px;
-  top: -18px;
-  left: -80px;
-  border-radius: 10%;
-
-  @media (min-width: @tablet-width) {
-    top: -16px;
-  }
-}
-
-.visited-input__checkbox:focus + .visited__label::before,
-.visited-input__checkbox:hover + .visited__label::before {
-  background-color: @light-grey;
-}
-
-.visited-input__checkbox:active + .visited__label::before {
-  background-color: @base-middlegrey;
-}
-
-.visited-input__checkbox:checked + .visited__label::after {
-  content: "";
-  position: absolute;
-  background-image: url("../../img/icon-tick.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  height: 50px;
-  width: 50px;
-  top: 2px;
-  left: -63px;
-
-  @media (min-width: @tablet-width) {
-    top: 5px;
-  }
-}
-
-.visited-input__checkbox:checked:active + .visited__label::after {
-  opacity: 0.3;
 }
