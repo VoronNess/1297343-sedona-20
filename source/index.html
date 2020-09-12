@@ -11,7 +11,7 @@
 
 <body class="page-body page-container">
   <header class="page-header">
-    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -75,9 +75,9 @@
         <ul class="advantages__list">
           <li class="advantages__item first-advantage">
             <div class="blue-theme">
-              <h3 class="advantages__title">Настоящий<br> городок</h3>
-              <span class="advantages-number advantages-number--white">№1</span>
-              <p class="advantages__description">
+              <h3 class="advantages__title first-advantage__title">Настоящий<br> городок</h3>
+              <span class="advantages-number first-advantage__number advantages-number--white">№1</span>
+              <p class="advantages__description first-advantage__description">
                 Седона не аттракцион для туристов, там <br>
                 течет своя жизнь</p>
             </div>
@@ -102,7 +102,7 @@
               <div class="deep-advantages__wrapper">
                 <ul class="deep-advantages__list">
                   <li class="deep-advantages__item">
-                    <svg class="icon-house" width="74.695px" height="72.346px">
+                    <svg class="icon-house" width="74" height="72">
                       <use xlink:href="img/sprite.svg#icon-house"></use>
                     </svg>
                     <h3 class="deep-advantages__title">Жилье</h3>
@@ -112,7 +112,7 @@
                       кино!</p>
                   </li>
                   <li class="deep-advantages__item icon-last">
-                    <svg class="icon-souvenirs" width="63px" height="75.084px">
+                    <svg class="icon-souvenirs" width="63" height="75">
                       <use xlink:href="img/sprite.svg#icon-gift"></use>
                     </svg>
                     <h3 class="deep-advantages__title">Сувениры</h3>
@@ -120,7 +120,7 @@
                       <br>местного производства!</p>
                   </li>
                   <li class="deep-advantages__item">
-                    <svg class="icon-food" width="76.166px" height="68.959px">
+                    <svg class="icon-food" width="76" height="68">
                       <use xlink:href="img/sprite.svg#icon-burger"></use>
                     </svg>
                     <h3 class="deep-advantages__title">Еда</h3>
@@ -135,9 +135,9 @@
           </li>
           <li class="advantages__item  second-advantage">
             <div class="blue-theme">
-              <h3 class="advantages__title">Там есть<br> мост дьявола</h3>
-              <span class="advantages-number advantages-number--white">№2</span>
-              <p class="advantages__description">
+              <h3 class="advantages__title second-advantage__title">Там есть<br> мост дьявола</h3>
+              <span class="advantages-number second-advantage__number advantages-number--white">№2</span>
+              <p class="advantages__description second-advantage__description">
                 Да, по нему можно пройти! Если вы<br>
                 осмелитесь, конечно
               </p>
@@ -162,24 +162,24 @@
         </ul>
         <ul class="advantages__list advantages-others">
           <li class="advantages__item advantages-others__item standart-theme">
-            <h3 class="advantages__title">Небольшая<br> площадь</h3>
-            <span class="advantages-number">№3</span>
+            <h3 class="advantages__title advantages-others__title">Небольшая<br> площадь</h3>
+            <span class="advantages-number advantages-others__number">№3</span>
             <p class="advantages__description advantages-others__description">
               Все интересные места находятся<br>
               очень близко
             </p>
           </li>
           <li class="advantages__item advantages-others__item standart-theme">
-            <h3 class="advantages__title">Красивая<br> дорога</h3>
-            <span class="advantages-number">№4</span>
+            <h3 class="advantages__title advantages-others__title">Красивая<br> дорога</h3>
+            <span class="advantages-number advantages-others__number">№4</span>
             <p class="advantages__description advantages-others__description">
               Ехать в Седону из Лас-Вегаса<br>
               совсем не скучно!
             </p>
           </li>
           <li class="advantages__item advantages-others__item standart-theme">
-            <h3 class="advantages__title">Мало<br> туристов</h3>
-            <span class="advantages-number">№5</span>
+            <h3 class="advantages__title advantages-others__title">Мало<br> туристов</h3>
+            <span class="advantages-number advantages-others__number">№5</span>
             <p class="advantages__description advantages-others__description">
               Большинство едет в Гранд Каньон<br>
               и толпится там
@@ -197,7 +197,7 @@
           поездки, и&nbsp;мы&nbsp;покажем&nbsp;вам&nbsp;лучшие<br>
           предложения гостиниц в Седоне
         </p>
-        <a class="button" href="">Найти гостиницу</a>
+        <a class="button search__button" href="hotel.html">Найти гостиницу</a>
       </div>
     </section>
     <section class="map">
@@ -230,7 +230,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="">
               <span class="visually-hidden">Твитер</span>
-              <svg width="17.5px" height="14.663px">
+              <svg width="17" height="14">
                 <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
@@ -238,7 +238,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="">
               <span class="visually-hidden">Фэйсбук</span>
-              <svg width="8.672px" height="18.944px">
+              <svg width="8" height="18">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -246,7 +246,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="">
               <span class="visually-hidden">Ютюб</span>
-              <svg width="19.979px" height="14.015px">
+              <svg width="19" height="14">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -255,7 +255,7 @@
       </div>
       <div class="copyright page-footer__item">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="icon-academy" width="27px" height="34px">
+          <svg class="icon-academy" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
@@ -263,9 +263,6 @@
       </div>
     </div>
   </footer>
-  <script src="js/scripts.js"></script>
-  <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDTgOH4fLL578oVcwJ-Vh54nMeHreM3D8I"></script>
 </body>
 
 </html>

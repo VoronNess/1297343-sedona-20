@@ -5,6 +5,8 @@ var formName = feedbackForm.querySelector("[name=user]");
 var formSurname = feedbackForm.querySelector("[name=surname]");
 var formEmail = feedbackForm.querySelector("[name=email]");
 var formTel = feedbackForm.querySelector("[name=tel]");
+var mistakePopup = document.querySelector(".modal-mistake");
+var successPopup = document.querySelector(".modal-success");
 
 function inputValid (formTel, formEmail) {
   if (!formName.value || !formSurname.value || !formEmail.value || !formTel.value) {
@@ -33,7 +35,7 @@ feedbackForm.addEventListener("submit", function (evt) {
 
 // Close mistake pop-up
 
-var mistakePopup = document.querySelector(".modal__mistake");
+
 var mistakeClose = mistakePopup.querySelector(".modal-close");
 
 mistakeClose.addEventListener("click", function (evt) {
@@ -51,7 +53,6 @@ window.addEventListener("keydown", function (evt) {
 });
 
 // Close success pop-up
-var successPopup = document.querySelector(".modal__success");
 var successClose = successPopup.querySelector(".modal-close");
 
 successClose.addEventListener("click", function (evt) {

@@ -1,6 +1,8 @@
 .like {
   background-color: transparent;
-  border: none;
+  text-decoration: none;
+  color: inherit;
+  fill: fade(@base-black, 30%);
 
   &:hover,
   &:focus {
@@ -16,11 +18,11 @@
 
     &:hover,
     &:focus {
-      fill: fade(@base-white, 60%);
+      fill: fade(@base-black, 60%);
     }
 
     &:active {
-      fill: fade(@base-white, 30%);
+      fill: fade(@base-black, 90%);
     }
   }
 
@@ -69,6 +71,7 @@
   font-weight: 700;
   font-family: @main-font;
   padding-left: 10px;
+  border: none;
 
   @media (min-width: @tablet-width) {
     padding-left: 5px;

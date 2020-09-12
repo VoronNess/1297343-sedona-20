@@ -12,7 +12,7 @@
 
 <body class="page-body page-container">
   <header class="page-header">
-    <nav class="main-nav main-nav--closed main-nav--nojs">
+    <nav class="main-nav main-nav--opened main-nav--nojs">
       <button class="main-nav__toggle" type="button">
         <span class="visually-hidden">Открыть меню</span>
       </button>
@@ -100,12 +100,12 @@
                 <li class="contacts__list-item contacts__tel">
                   <label class="contacts__label" for="contacts-tel"><span class="display-none">Контактный
                     </span>телефон<sup>*</sup>:</label>
-                  <input class="form-input tel-input" id="contacts-tel" type="tel" pattern="^[ 0-9]+$" name="tel"
-                    data-rule="tel" placeholder="Введите телефон">
+                  <input class="form-input contacts__input-tel" id="contacts-tel" type="tel" pattern="^[ 0-9]+$"
+                    name="tel" data-rule="tel" placeholder="Введите телефон">
                 </li>
                 <li class="contacts__list-item contacts__email">
                   <label class="contacts__label" for="contacts-email">Электронная почта<sup>*</sup>:</label>
-                  <input class="form-input email-input" id="contacts-email" type="email"
+                  <input class="form-input contacts__input-email" id="contacts-email" type="email"
                     pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[a-zA-Z0-9]+" name="email" data-rule="email"
                     placeholder="Введите e-mail">
                 </li>
@@ -174,7 +174,7 @@
           <li class="social__item">
             <a class="social__link social__link--twitter" href="">
               <span class="visually-hidden">Твитер</span>
-              <svg width="17.5px" height="14.663px">
+              <svg width="17" height="14">
                 <use xlink:href="img/sprite.svg#icon-twitter"></use>
               </svg>
             </a>
@@ -182,7 +182,7 @@
           <li class="social__item">
             <a class="social__link social__link--facebook" href="">
               <span class="visually-hidden">Фэйсбук</span>
-              <svg width="8.672px" height="18.944px">
+              <svg width="8" height="18">
                 <use xlink:href="img/sprite.svg#icon-facebook"></use>
               </svg>
             </a>
@@ -190,7 +190,7 @@
           <li class="social__item">
             <a class="social__link social__link--youtube" href="">
               <span class="visually-hidden">Ютюб</span>
-              <svg width="19.979px" height="14.015px">
+              <svg width="19" height="14">
                 <use xlink:href="img/sprite.svg#icon-youtube"></use>
               </svg>
             </a>
@@ -199,7 +199,7 @@
       </div>
       <div class="copyright page-footer__item">
         <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">Разработано
-          <svg class="icon-academy" width="27px" height="34px">
+          <svg class="icon-academy" width="27" height="34">
             <use xlink:href="img/sprite.svg#icon-academy"></use>
           </svg>
           <span class="visually-hidden">HTML Academy</span>
@@ -212,7 +212,7 @@
     <h2 class="modal__title modal__title--mistake">Что-то пошло<br> не так!</h2>
     <p class="modal__text modal__text--mistake">Проверьте поля, выделенные<br> красным, скорее всего вы<br> забыли их
       заполнить</p>
-    <button class="button modal__close button-mistake"> ok</button>
+    <button class="button modal-close button-mistake"> ok</button>
   </section>
 
   <section class="modal modal-success">
@@ -220,7 +220,7 @@
     <p class="modal__text  modal__text--success">Спасибо за ваше участие, ваш<br>отзыв уже поступил к нам.<br> В
       ближайшее время мы<br> опубликуем его на сайте.</p>
     <div class="button-wrapper">
-      <button class="button modal__close button-success">Закрыть окно</button>
+      <button class="button modal-close button-success">Закрыть окно</button>
     </div>
   </section>
   <script src="js/scripts.js"></script>

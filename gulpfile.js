@@ -32,6 +32,20 @@ const styles = () => {
 };
 exports.styles = styles;
 
+const stylesCopy = () => {
+  return gulp.src("source/less/style.less")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(less())
+    .pipe(postcss([
+      autoprefixer()
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("build/css"))
+    .pipe(sync.stream());
+};
+exports.stylesCopy = stylesCopy;
+
 // Img optimization
 
 const images = () => {
@@ -143,6 +157,7 @@ const build = gulp.series(
   createWebp,
   sprite,
   html,
+  stylesCopy,
   scripts,
 );
 exports.build = build;
