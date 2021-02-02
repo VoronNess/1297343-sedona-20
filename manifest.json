@@ -1,0 +1,32 @@
+{
+  "name": "Туристический город «Седона»",
+  "short_name": "Седона",
+  "start_url": "index.html",
+
+  "background_color": "#9ECCE8",
+  "theme_color": "#9ECCE8",
+  "description": "Туристический город «Седона», штат Аризона",
+  "display": "fullscreen",
+  "orientation":"portrait-primary",
+  "prefer_related_applications": "true",
+
+  "icons": [
+    {
+      "src": "img/icons/logo-icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/logo-icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "img/icons/logo-icon-mask.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
+
+}

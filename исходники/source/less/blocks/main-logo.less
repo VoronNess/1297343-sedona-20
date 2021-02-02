@@ -1,0 +1,25 @@
+.main-logo {
+  background-color: @base-white;
+  position: relative;
+  min-height: 56px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: @tablet-width) {
+    position: absolute;
+    background-color: transporent;
+  }
+}
+
+.main-logo__link {
+  display: block;
+  z-index: 2;
+  position: absolute;
+}
+
+.main-logo__img {
+  @media (min-width: @desktop-width) {
+    width: 187px;
+    height: 97px;
+  }
+}
