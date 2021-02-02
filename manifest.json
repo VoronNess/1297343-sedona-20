@@ -7,7 +7,6 @@
   "theme_color": "#9ECCE8",
   "description": "Туристический город «Седона», штат Аризона",
   "display": "fullscreen",
-  "orientation":"portrait-primary",
   "icons": [
     {
       "src": "img/icons/logo-icon-192.png",
